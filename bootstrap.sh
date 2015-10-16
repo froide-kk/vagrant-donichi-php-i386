@@ -5,7 +5,6 @@ yum install -y mysql-server
 yum install -y php
 yum install -y epel-release
 yum install -y phpMyAdmin
-yum update -y
 ln -s /mnt/fuelphp /home/vagrant/fuelphp
 cp /mnt/fuelphp/vagrant/*.conf /etc/httpd/conf.d
 curl get.fuelphp.com/oil | sh
