@@ -10,7 +10,7 @@ yum install -y phpMyAdmin
 ln -s /mnt/fuelphp /home/vagrant/fuelphp
 cp /mnt/fuelphp/vagrant/*.conf /etc/httpd/conf.d
 curl get.fuelphp.com/oil | sh
-sed -i "s/;date.timezone =/date.timezone = Asia\/Tokyo/" /etc/php.ini
+sed -i 's/^;date.timezone =$/date.timezone = Asia\/Tokyo/' /etc/php.ini
 chkconfig httpd on
 chkconfig mysqld on
 service httpd start
